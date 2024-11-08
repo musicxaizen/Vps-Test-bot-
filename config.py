@@ -23,8 +23,7 @@ LOGGER_ID = int(getenv("LOGGER_ID", "-1002018547496"))
 
 # Get this value from @FallenxBot on Telegram by /id
 OWNER_ID = int(getenv("OWNER_ID", "6806897901"))
-
-BOT_USERNAME = "Soul_musicx1bot"
+BOT_USERNAME = int(getenv("BOT_USERNAME", "Soul_musicx1bot"))
 
 ## Fill these variables if you're deploying on heroku.
 # Your heroku app name
