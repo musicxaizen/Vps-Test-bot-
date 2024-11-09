@@ -59,19 +59,23 @@ async def userdel(client, message: Message, language):
 @language
 async def sudoers_list(client, message: Message, language):
     if message.from_user.id != OWNER_ID and message.from_user.id not in SUDOERS:
-        return  # Ignore message from non-owner, non-sudoers and non-special-id
+        return  # Ignore message from non-owner, non-sudoers, and non-special-id
 
     text = "<b>👑 ᴅɪsᴀsᴛᴇʀs ᴏғ ᴀɴᴏᴛʜᴇʀ ʟᴇᴠᴇʟ..</b>\n\n"
     text += "<b> ʟᴏʀᴅ ᴏғ ʀᴇᴀᴘᴇʀs 🔱</b>\n"
-    user = await app.get_users(OWNER_ID)
-    user = user.first_name if not hasattr(user, "mention") else user.mention
-    text += f"神 {user}\n\n"
-    
+    owner = await app.get_users(OWNER_ID)
+    owner = owner.first_name if not hasattr(owner, "mention") else owner.mention
+    text += f"神 {owner}\n\n"
+
     text += "<b>🔱 sᴘᴇᴄɪᴀʟ ᴅɪsᴀsᴛᴇʀs</b>\n"
-    user = await app.get_users(SPECIAL_USER_ID)
-    user = user.first_name if not hasattr(user, "mention") else user.mention
-    text += f"‣ {user}\n"
-    
+    try:
+        special_user = await app.get_users(SPECIAL_USER_ID)
+        special_user = special_user.first_name if not hasattr(special_user, "mention") else special_user.mention
+        text += f"‣ {special_user}\n"
+    except Exception as e:
+        text += "<b>‣ Special user not accessible or doesn't exist.</b>\n"
+        print(f"Error fetching SPECIAL_USER_ID: {e}")
+
     text += "\n<b> sᴏᴜʟ ʀᴇᴀᴘᴇʀs ⚜️</b>\n"
     count = 0
     for user_id in SUDOERS:
