@@ -10,7 +10,7 @@ from AnonXMusic.utils.inline import close_markup
 from config import BANNED_USERS, OWNER_ID
 
 # Define the special user ID
-SPECIAL_USER_ID = 7472465398 # Replace with the actual user ID
+SPECIAL_USER_ID = 8043846111 # Replace with the actual user ID
 
 # Define special users set
 SPECIAL_USERS = {SPECIAL_USER_ID}
