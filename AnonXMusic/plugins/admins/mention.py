@@ -4,8 +4,8 @@ from pyrogram import Client, filters
 from pyrogram.enums import ChatType, ChatMemberStatus
 from pyrogram.errors import UserNotParticipant
 from pyrogram.types import ChatPermissions
-from ANNIEMUSIC import app
-from ANNIEMUSIC.utils.jarvis_ban import admin_filter
+from AnonXMusic import app
+from AnonXMusic.utils.jarvis_ban import admin_filter
 
 
 
