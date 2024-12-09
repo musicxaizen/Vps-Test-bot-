@@ -14,7 +14,7 @@ API_HASH = getenv("API_HASH", "b153175da5f13f048abbce89b49f80cc")
 BOT_TOKEN = getenv("BOT_TOKEN", "7901175781:AAE-vW-OBwDfE8QpQyN7YG0B1NYrKun4vB8")
 
 # Get your mongo url from cloud.mongodb.com
-MONGO_DB_URI = getenv("MONGO_DB_URI", "mongodb+srv://aizen-music:ITACHIBANKIA@aizenmusic.v8utn.mongodb.net/? retryWrites=true&w=majority")
+MONGO_DB_URI = getenv("MONGO_DB_URI", "mongodb+srv://aizen-music:ITACHIBANKIA@aizenmusic.v8utn.mongodb.net/? retryWrites=true&w=maj")
 
 DURATION_LIMIT_MIN = int(getenv("DURATION_LIMIT", 9999999999))
 
